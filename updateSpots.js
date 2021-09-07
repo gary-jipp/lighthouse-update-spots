@@ -9,7 +9,7 @@
 const updateSpots = function (state, appointments) {
 
   state.days[0].spots = 2;
-  return state.days;
+  return [... state.days];
 };
 
 module.exports = updateSpots;

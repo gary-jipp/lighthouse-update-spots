@@ -22,15 +22,13 @@ describe('Update Spots Tests', function () {
 
   it('should update spots and not change original days array', function () {
     assert.equal(days[0].spots, 2);
-    assert.deepEqual(state.days, oldState.days);
+    assert.equal(state.days, oldState.days);
   });
 
   it('should update spots and  not change the original day object', function () {
     assert.equal(days[0].spots, 2);
     assert.deepEqual(state.days[0], oldState.days[0]);
   });
-
-
 
 });
 
