@@ -9,7 +9,7 @@ describe('Update Spots Tests', function () {
   const interview = { student: "Test Student", interviewer: 99 };
   const appointment = { ...state.appointments[id], interview: { ...interview } };
   const appointments = { ...state.appointments, [id]: appointment };
-  const days = updateSpots(state, appointments);
+  const days = updateSpots(state, appointments, id);
 
   it('should update spots from 99 to 2 ', function () {
     assert.isDefined(days[0]);
