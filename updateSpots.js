@@ -6,7 +6,7 @@
  * @return {Array}   A Days array we can save back into state.
  */
 
-const updateSpots = function (state, appointments, id) {
+const updateSpots = function (state, appointments) {
 
   return [];
 };
