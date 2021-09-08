@@ -12,10 +12,12 @@ describe('Update Spots Tests', function () {
   const days = updateSpots(state, appointments);
 
   it('should update spots from 99 to 2 ', function () {
+    assert.isDefined(days[0]);
     assert.equal(days[0].spots, 2);
   });
 
   it('should update spots and not change original days array', function () {
+    assert.isDefined(days[0]);
     assert.equal(days[0].spots, 2);
     assert.equal(state.days, oldState.days);
   });
