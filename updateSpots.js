@@ -8,7 +8,10 @@
 
 const updateSpots = function (state, appointments) {
 
+  // return days array
   return [];
 };
 
 module.exports = updateSpots;
+
+

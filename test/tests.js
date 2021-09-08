@@ -10,16 +10,18 @@ describe('Update Spots Tests', function () {
   const appointment = { ...state.appointments[id], interview: { ...interview } };
   const appointments = { ...state.appointments, [id]: appointment };
   const days = updateSpots(state, appointments, id);
+  
+  // setState({...state, appointment, days})
 
-  it('should update spots from 99 to 2 ', function () {
+  it('should update spots to 1 ', function () {
     assert.isDefined(days[0]);
-    assert.equal(days[0].spots, 2);
+    assert.equal(days[0].spots, 1);
   });
 
   it('should update spots and not change original days array', function () {
     assert.isDefined(days[0]);
-    assert.equal(days[0].spots, 2);
-    assert.equal(state.days, oldState.days);
+    assert.equal(days[0].spots, 1);
+    assert.deepEqual(state.days, oldState.days);
   });
 
 });
