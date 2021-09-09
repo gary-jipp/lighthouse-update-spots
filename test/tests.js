@@ -32,7 +32,7 @@ describe('Update Spots Tests for bookInterview (update)', function () {
   const appointments = { ...state.appointments, [id]: appointment };
   const days = updateSpots(state, appointments, id);
 
-  it('should update spots to 2 ', function () {
+  it('should keep spots at 2 ', function () {
     assert.equal(days[0].spots, 2);
   });
 
