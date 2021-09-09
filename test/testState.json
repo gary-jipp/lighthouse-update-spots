@@ -6,7 +6,7 @@
       "name": "Monday",
       "appointments": [1, 2, 3],
       "interviewers": [1, 2],
-      "spots": 99
+      "spots": 2
     },
     {
       "id": 2,
