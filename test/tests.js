@@ -12,6 +12,7 @@ describe('Update Spots Tests for bookInterview (create)', function () {
   const days = updateSpots(state, appointments, id);
 
   it('should update spots to 1 ', function () {
+    assert.isDefined(days[0]);
     assert.equal(days[0].spots, 1);
   });
 
@@ -33,6 +34,7 @@ describe('Update Spots Tests for bookInterview (update)', function () {
   const days = updateSpots(state, appointments, id);
 
   it('should keep spots at 2 ', function () {
+    assert.isDefined(days[0]);
     assert.equal(days[0].spots, 2);
   });
 
@@ -59,6 +61,7 @@ describe('Update Spots Tests for cancelInterview', function () {
   });
 
   it('should update spots and not change original days array', function () {
+    assert.isDefined(days[0]);
     assert.equal(days[0].spots, 3);
     assert.deepEqual(state.days, oldState.days);
   });
