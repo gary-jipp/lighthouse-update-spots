@@ -1,7 +1,7 @@
 const { assert } = require('chai');
 const updateSpots = require('../updateSpots');
 
-describe('Update Spots Tests for bookInterview (create)', function () {
+describe('Update Spots Tests for bookInterview (create)', function() {
   const oldState = require('./testState.json');
   const state = JSON.parse(JSON.stringify(oldState));
 
@@ -11,19 +11,19 @@ describe('Update Spots Tests for bookInterview (create)', function () {
   const appointments = { ...state.appointments, [id]: appointment };
   const days = updateSpots(state, appointments, id);
 
-  it('should update spots to 1 ', function () {
+  it('should update spots to 1 ', function() {
     assert.isDefined(days[0]);
     assert.equal(days[0].spots, 1);
   });
 
-  it('should update spots and not change original days array', function () {
+  it('should update spots and not change original days array', function() {
     assert.isDefined(days[0]);
     assert.equal(days[0].spots, 1);
     assert.deepEqual(state.days, oldState.days);
   });
 });
 
-describe('Update Spots Tests for bookInterview (update)', function () {
+describe('Update Spots Tests for bookInterview (update)', function() {
   const oldState = require('./testState.json');
   const state = JSON.parse(JSON.stringify(oldState));
 
@@ -33,19 +33,19 @@ describe('Update Spots Tests for bookInterview (update)', function () {
   const appointments = { ...state.appointments, [id]: appointment };
   const days = updateSpots(state, appointments, id);
 
-  it('should keep spots at 2 ', function () {
+  it('should keep spots at 2 ', function() {
     assert.isDefined(days[0]);
     assert.equal(days[0].spots, 2);
   });
 
-  it('should update spots and not change original days array', function () {
+  it('should update spots and not change original days array', function() {
     assert.isDefined(days[0]);
     assert.equal(days[0].spots, 2);
     assert.deepEqual(state.days, oldState.days);
   });
 });
 
-describe('Update Spots Tests for cancelInterview', function () {
+describe('Update Spots Tests for cancelInterview', function() {
   const oldState = require('./testState.json');
   const state = JSON.parse(JSON.stringify(oldState));
 
@@ -55,15 +55,14 @@ describe('Update Spots Tests for cancelInterview', function () {
   const appointments = { ...state.appointments, [id]: appointment };
   const days = updateSpots(state, appointments, id);
 
-  it('should update spots to 3 ', function () {
+  it('should update spots to 3 ', function() {
     assert.isDefined(days[0]);
     assert.equal(days[0].spots, 3);
   });
 
-  it('should update spots and not change original days array', function () {
+  it('should update spots and not change original days array', function() {
     assert.isDefined(days[0]);
     assert.equal(days[0].spots, 3);
     assert.deepEqual(state.days, oldState.days);
   });
 });
-
