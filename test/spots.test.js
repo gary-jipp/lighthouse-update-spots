@@ -45,7 +45,7 @@ describe('Update Spots Tests for bookInterview (update)', function() {
   });
 });
 
-describe('Update Spots Tests for cancelInterview', function() {
+describe('Update Spots Tests for cancelInterview (delete)', function() {
   const oldState = require('./testState.json');
   const state = JSON.parse(JSON.stringify(oldState));
 
