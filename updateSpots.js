@@ -9,8 +9,11 @@
 
 const updateSpots = function(state, appointments, id) {
 
-  // return an updated days array 
-  return state.days;
+  // THIS IS NOT THE SOLUTION!!!
+  const updatedDays   = [...state.days]
+
+  // return an updated days array
+  return updatedDays
 };
 
 module.exports = updateSpots;
